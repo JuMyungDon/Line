@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid homework</title>
+    <style>
+        body{margin:0; padding:0; width:100%; height:100%; font-family:"맑은 고딕",sans-serif;}
+        .main{
+            margin:30px auto; display:flex; flex-flow:row wrap; gap:50px;
+        }
+        .content1{
+            width:500px; height:300px; display:grid; gap:5px; margin:30px auto; color:#fff; font-size:2.5em; 
+            grid-template-columns:repeat(3,1fr);
+            grid-template-rows:repeat(5,1fr);
+            grid-template-areas:
+                "box1_1 box1_1 box1_1"
+                "box1_2 box1_3 box1_4"
+                "box1_2 box1_5 box1_5"
+                "box1_6 box1_6 box1_7"
+                "box1_8 box1_8 box1_8"
+        }
+        .ali_c{display:flex; justify-content:center;}
+        .ali_t{display:flex; justify-content:center; align-items:flex-start;}
+        .box1_1{grid-area:box1_1; background:rgb(180, 15, 111);}
+        .box1_2{grid-area:box1_2; background:rgb(96, 34, 241);}
+        .box1_3{grid-area:box1_3; background:rgb(119, 96, 202);}
+        .box1_4{grid-area:box1_4; background:rgb(45, 204, 209);}
+        .box1_5{grid-area:box1_5; background:rgb(196, 119, 206);}
+        .box1_6{grid-area:box1_6; background:rgb(180, 15, 111);}
+        .box1_7{grid-area:box1_7; background:rgb(96, 34, 241);}
+        .box1_8{grid-area:box1_8; background:rgb(119, 96, 202);}
+        .content2{
+            width:400px; height:300px; display:grid; gap:5px; margin:30px auto;
+            grid-template-columns:repeat(3,1fr);
+            grid-template-rows:repeat(3,1fr);
+            grid-template-areas:
+                "box2_1 box2_2 box2_3"
+                "box2_4 box2_4 box2_5"
+                "box2_6 box2_7 box2_7"
+        }
+        .bor_g{border:5px solid rgb(144, 236, 58);}
+        .box2_1{grid-area:box2_1;}
+        .box2_2{grid-area:box2_2;}
+        .box2_3{grid-area:box2_3;}
+        .box2_4{grid-area:box2_4;}
+        .box2_5{grid-area:box2_5;}
+        .box2_6{grid-area:box2_6;}
+        .box2_7{grid-area:box2_7;}
+        .content3{
+            width:300px; height:300px; display:grid; gap:5px; margin:30px auto;
+            grid-template-columns:repeat(3,1fr);
+            grid-template-rows:repeat(4,1fr);
+            grid-template-areas:
+                "box3_1 box3_2 box3_3"
+                "box3_4 . box3_3"
+                "box3_5 box3_6 box3_6"
+                "box3_5 box3_7 box3_8"
+        }
+        .bor_gr{border:5px solid goldenrod}
+        .box3_1{grid-area:box3_1;}
+        .box3_2{grid-area:box3_2;}
+        .box3_3{grid-area:box3_3;}
+        .box3_4{grid-area:box3_4;}
+        .box3_5{grid-area:box3_5;}
+        .box3_6{grid-area:box3_6;}
+        .box3_7{grid-area:box3_7;}
+        .box3_8{grid-area:box3_8;}
+        .content4{
+            width:800px; height:200px; display:grid; margin:30px auto; gap:10px; 
+            grid-template-columns:repeat(5,1fr);
+            grid-template-rows:repeat(6,1fr);
+            grid-template-areas:
+                "box4_1 box4_1 box4_1 box4_2 box4_3"
+                "box4_1 box4_1 box4_1 box4_4 box4_5"
+                "box4_1 box4_1 box4_1 box4_6 box4_7"
+                "box4_1 box4_1 box4_1 box4_8 box4_9"
+                "box4_10 box4_11 box4_12 box4_13 box4_14"
+                "box4_15 box4_16 box4_17 . ."
+        }
+        .box_p{background:pink; border:1px solid #333; padding:3px; font-weight:bold;}
+        .box4_1{grid-area:box4_1;}
+        .box4_2{grid-area:box4_2;}
+        .box4_3{grid-area:box4_3;}
+        .box4_4{grid-area:box4_4;}
+        .box4_5{grid-area:box4_5;}
+        .box4_6{grid-area:box4_6;}
+        .box4_7{grid-area:box4_7;}
+        .box4_8{grid-area:box4_8;}
+        .box4_9{grid-area:box4_9;}
+        .box4_10{grid-area:box4_10;}
+        .box4_11{grid-area:box4_11;}
+        .box4_12{grid-area:box4_12;}
+        .box4_13{grid-area:box4_13;}
+        .box4_14{grid-area:box4_14;}
+        .box4_15{grid-area:box4_15;}
+        .box4_16{grid-area:box4_16;}
+        .box4_17{grid-area:box4_17;}
+        .content5{
+            width:300px; height:200px; display:grid; margin:30px auto; gap:10px;
+            grid-template-columns:repeat(3,1fr);
+            grid-template-rows:repeat(3,1fr);
+            grid-template-areas:
+                "box5_1 box5_1 box5_2"
+                "box5_3 box5_4 box5_2"
+                "box5_3 box5_4 box5_5"
+        }
+        .box5_1{grid-area:box5_1;}
+        .box5_2{grid-area:box5_2;}
+        .box5_3{grid-area:box5_3;}
+        .box5_4{grid-area:box5_4;}
+        .box5_5{grid-area:box5_5;}
+    </style>
+</head>
+<body>
+    <section class="main">
+        <section class="content1">
+            <div class="ali_c box1_1">1</div>
+            <div class="ali_t box1_2">2</div>
+            <div class="ali_c box1_3">3</div>
+            <div class="ali_c box1_4">4</div>
+            <div class="ali_c box1_5">5</div>
+            <div class="ali_c box1_6">6</div>
+            <div class="ali_c box1_7">7</div>
+            <div class="ali_c box1_8">8</div>
+        </section>
+        <section class="content2">
+            <div class="bor_g box2_1"></div>
+            <div class="bor_g box2_2"></div>
+            <div class="bor_g box2_3"></div>
+            <div class="bor_g box2_4"></div>
+            <div class="bor_g box2_5"></div>
+            <div class="bor_g box2_6"></div>
+            <div class="bor_g box2_7"></div>
+        </section>
+        <section class="content3">
+            <div class="bor_gr box3_1"></div>
+            <div class="bor_gr box3_2"></div>
+            <div class="bor_gr box3_3"></div>
+            <div class="bor_gr box3_4"></div>
+            <div class="bor_gr box3_5"></div>
+            <div class="bor_gr box3_6"></div>
+            <div class="bor_gr box3_7"></div>
+            <div class="bor_gr box3_8"></div>
+        </section>
+        <section class="content4">
+            <div class="box_p box4_1">div1</div>
+            <div class="box_p box4_2">div2</div>
+            <div class="box_p box4_3">div3</div>
+            <div class="box_p box4_4">div4</div>
+            <div class="box_p box4_5">div5</div>
+            <div class="box_p box4_6">div6</div>
+            <div class="box_p box4_7">div7</div>
+            <div class="box_p box4_8">div8</div>
+            <div class="box_p box4_9">div9</div>
+            <div class="box_p box4_10">div10</div>
+            <div class="box_p box4_11">div11</div>
+            <div class="box_p box4_12">div12</div>
+            <div class="box_p box4_13">div13</div>
+            <div class="box_p box4_14">div14</div>
+            <div class="box_p box4_15">div15</div>
+            <div class="box_p box4_16">div16</div>
+            <div class="box_p box4_17">div17</div>
+        </section>
+        <section class="content5">
+            <div class="box_p box5_1">div1</div>
+            <div class="box_p box5_2">div2</div>
+            <div class="box_p box5_3">div3</div>
+            <div class="box_p box5_4">div4</div>
+            <div class="box_p box5_5">div5</div>
+        </section>
+    </section>
+</body>
+</html>
