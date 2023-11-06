@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        body{margin:0; font-size:16px; font-family:"나눔고딕", "맑은 고딕",sans-serif; }
+        table{
+            width:1000px; margin:50px auto;
+            height:400px;
+            border:2px solid #38c;            
+            border-spacing:0px;
+            border-collapse:collapse;
+        }
+        caption{
+            text-align:left;
+            font-weight:bold;
+            font-size:1.2em;
+        }
+        th,td{
+            border:1px solid #38c;
+            padding:5px;
+        }
+        th{
+            background:#eee;
+        }
+        td{
+            text-align:left;
+        }
+        #program{
+            width:12%;
+        }
+        #new{
+            width:14%;
+        }
+        #t_eco{
+            width:22%;
+        }
+        #ole{
+            width:22%;
+        }
+        #skt{
+            background:rgb(216, 90, 17);
+        }
+        #kt{
+            background:#aaa;
+        }
+        #lgu{
+            background:rgb(235, 159, 194);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>이통3사 중고폰 보상매입 서비스 비교</caption>
+        <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th colspan="2" id="skt">SKT</th>
+                <th id="kt">KT</th>
+                <th id="lgu">LGU+</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th id="program">프로그램 명칭</th>
+                <td id="new">NEW보상기변</td>
+                <td id="t_eco">T에코폰</td>
+                <td id="ole">올레그린폰</td>
+                <td id="used">중고폰 매입 프로그램</td>
+            </tr>
+            <tr>
+                <th>대상</th>
+                <td>기변</td>
+                <td>신규</td>
+                <td>신규,기변</td>
+                <td>신규,기변</td>
+            </tr>
+            <tr>
+                <th>가능매장</th>
+                <td colspan="2">지점 및 대리점</td>
+                <td>온라인, 직영점</td>
+                <td>소매직영점, 대리점</td>
+            </tr>
+            <tr>
+                <th rowspan="4">등급</th>
+                <td colspan="2">N:미사용 제품</td>
+                <td>최상(A+):미사용 제품</td>
+                <td>A:새 제품</td>
+            </tr>
+            <tr>
+                <td rowspan="2">A:기능 정상이면 외관 상관 없음</td>
+                <td>A:외관 및 기능 정상</td>
+                <td>양호(A):외관 및 기능 정상</td>
+                <td>B:외관과 기능 정상</td>
+            </tr>
+            <tr>
+                <td>B:외관에 이상/기능은 정상</td>
+                <td>불량(B):외관 및 기능 불량</td>
+                <td>C:외관에 이상이 있으나 기능 정상</td>
+            </tr>
+            <tr>
+                <td colspan="2">E:기능 불량</td>
+                <td>&nbsp;</td>
+                <td>D:매입불가폰<br>(전원, 메인보드, LCD불량/심각한파손)</td>
+            </tr>
+            <tr>
+                <th>보상방식</th>
+                <td colspan="2">신규단말 할부금 선할인, 현금입금, 요금선납</td>
+                <td>포인트 적립 후 신규단말 혹은 기존 단말 잔여할부금 할인</td>
+                <td>잔여 할부금 면제, 신규단말 할부금 선할인</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
